@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <title>CheyenneByWilliams.com</title>
+	 <link rel="stylesheet" href="style.css">
+	 <link rel="preconnect" href="https://fonts.googleapis.com">
+	 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" 
+rel="stylesheet">
+<link rel="stylesheet" href= "https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+</head>
+<body>
+<section class ="subheader">
+	<nav>
+		<a href="index.html"><img src="Images/logo.png"></a>
+		<div class="nav-links" id= "navLinks">
+			<i class="fa fa-window-close-o" onclick="hideMenu()"></i>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="about.html">ABOUT ME </a></li>
+				<li><a href="projects.html">PROJECTS</a></li>
+				<li><a href="creations.html">MY CREATIONS</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+		<i class="fa fa-bars" onclick="showMenu()"></i>
+	</nav>
+	<h1>ABOUT ME</h1>
+</section>
+
+
+<!----- MyLife------->
+
+
+
+<!-- Slideshow container -->
+<section class="slide-show">
+	<h1>Pictures are Worth a 1000 Words</h1>
+	
+	<p> Photography has become an integral part
+		 of my life, as I find immense joy in capturing
+		  and preserving the moments that define my 
+		  journey. From the simplest everyday pleasures
+		   to the grand adventures, I believe in the power
+		    of a photograph to freeze time, encapsulating 
+			emotions, stories, and memories. Take a look at my
+			recent captures!  </p>
+
+
+</section>
+
+
+<section class="slideshow-container">
+	<div class="slideshow-container">
+
+		<!-- Full-width images with number and caption text -->
+		<div class="mySlides fade">
+		  
+		  <img src="Images/IMG_8579.jpeg" style="width:100%">
+		  
+		</div>
+	  
+		<div class="mySlides fade">
+		  
+		  <img src="Images/IMG_3614.jpeg" style="width:100%">
+		  
+		</div>
+		
+		<div class="mySlides fade">
+			
+			<img src="Images/IMG_1354.jpeg" style="width:100%">
+		</div>
+	  
+		<div class="mySlides fade">
+		  
+		  <img src="Images/IMG_9655.jpeg" style="width:100%">
+		  
+		</div>
+	  
+		<!-- Next and previous buttons -->
+		<div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		
+	  </div>
+	  <br>
+	  
+	  <!-- The dots/circles -->
+	  <div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+		<span class="dot" onclick="currentSlide(4)"></span>
+		
+	  </div>		
+	
+			</div>
+		</div>
+
+</section>
+
+<section class="bottom_aboutme">
+	<h1> Thank You!</h1>
+	<p> This website serves as a platform for me to share my passions, interests, and experiences. While I've tried to provide a glimpse into my life in this brief introduction, there's so much more to discover in my detailed "About Me" section. </p>
+	<p>I invite you to delve deeper into my journey, my inspirations, and the things that drive me.
+		Moreover, if you have any questions, want to collaborate, or simply wish to connect, please don't hesitate to reach out to me through the "Contact Me" page. </p> 
+	<p>	I would be thrilled to engage in meaningful conversations and establish new connections.</p>
+	<p>Once again, thank you for visiting my personal webpage. 
+		I genuinely hope you had fun getting to know me a little better, 
+		and I look forward to the opportunity to share more with you.</p>	
+
+
+</section>
+
+<!----------JavaScript for Toggle--------->
+<script>
+
+	var navLinks = document.getElementById("navLinks");
+
+	function showMenu(){
+		navLinks.style.right = "0";
+	}
+	function hideMenu(){
+		navLinks.style.right = "-200px";
+	}
+
+</script>
+<!----------JavaScript for slideshow--------->
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+
+
+</section>
+    
+<div class="footer">
+	<p>&copy; 2023 My Personal Website. All rights reserved.</p>
+</div>
+	
+</body>
+</html>
+
